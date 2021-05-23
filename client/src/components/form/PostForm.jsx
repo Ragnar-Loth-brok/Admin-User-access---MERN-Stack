@@ -17,7 +17,7 @@ export default function PostForm() {
             return { error : `Please fill all the fields` }
         }
 
-        const res = await axios.post('https://6d2916f709b6.ngrok.io/form', {
+        const res = await axios.post('https://domain/form', {
             book: { title, author },
             email: state.email})
         if(res.data && res.data.error) {

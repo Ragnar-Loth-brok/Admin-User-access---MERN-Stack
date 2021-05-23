@@ -1,0 +1,92 @@
+.userForm{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    top: 100px;
+    left: 200px;
+    background-image: linear-gradient(120deg, rgba(0 ,0 ,0 ,0.3) 100%, transparent 100%), url('../images/un1w.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -50px -50px 50px 50px #000;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.userForm h1{
+    font-size: 3rem;
+    color: #ddd;
+    font-family: monospace;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 60px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid crimson;
+}
+.userForm form{
+    margin-top: 100px;
+    text-align: center;
+}
+.userForm form input[type=text]{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ddd;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin: 15px 0px;
+    font-size: 16px;
+    width: 400px;
+}
+.userForm form input:last-child{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ddd;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 15px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 400px;
+}
+
+.userForm form button {
+    outline: none;
+    z-index: 5;
+    position: relative;
+    top: 200;
+    margin-top: 40px;
+    color: #ddd;
+    text-transform: uppercase;
+    font-family: monospace;
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 20px;
+    line-height: 30px;
+    font-weight: bolder;
+    background-color: inherit;
+    border: 1px solid crimson;
+    overflow: hidden;
+    cursor: pointer;
+}
+.userForm form button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ddd;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: all 0.3s linear;
+  }
+  .userForm form button:hover:before{
+    z-index: -1;
+    transform: translateY(0%);
+    background-color:#ddd;
+  }
+  .userForm form button:hover{
+    color: rgba(220, 20, 60);
+  }

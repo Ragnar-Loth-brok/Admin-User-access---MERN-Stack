@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 
 const refresh = refreshToken => {
     return new Promise((resolve, reject) => {
-        axios.post('http://localhost/8000/refresh', { token: refreshToken } ).then(res => {
+        axios.post('http://server-domain/refresh', { token: refreshToken } ).then(res => {
             if (res.data.error) resolve(false);
             else {
                 const { accessToken } = res.data;
@@ -18,7 +18,7 @@ const refresh = refreshToken => {
 
 const requestLogin = async (accessToken, refreshToken) => {
     return new Promise ((resolve, reject) => {
-        axios.post('http://localhost:8000//protected', {}, { headers: { "authorization" : `Bearer ${accessToken}` }}).then( async res => {
+        axios.post('http://server-domain//protected', {}, { headers: { "authorization" : `Bearer ${accessToken}` }}).then( async res => {
             if(res.data.error == 'User not authenticated') return 'Invalid'
             else if( res.data.error == 'Access Token expired' ) {
                 const accessToken = await refresh(refreshToken);

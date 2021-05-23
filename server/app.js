@@ -10,9 +10,9 @@ app.use(cookieParser());
 app.use(authRoutes)
 
 
-mongoose.connect('mongodb://localhost:27017/prot1-auth', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then(() => console.log('Database Connected'))
+mongoose.connect('mongodb://database-domain/prot1-auth', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then(() => console.log('Database Connected'))
 .catch(error => console.log('Database connection refused!', error))
 
+const port = "Enter_Port_Here"
 
-
-app.listen(8000, () => console.log("listening to the port 8000"))
+app.listen(port, () => console.log("listening to the port " + port))

@@ -12,7 +12,7 @@ export default function SignIn() {
 
     const handleSubmit = async (email, password)  => {
 
-        const res = await axios.post('https://6d2916f709b6.ngrok.io/signin', { email, password });
+        const res = await axios.post('https://domain/signin', { email, password });
 
         if (res.data.error) dispatch( { type: 'SET_ERROR', payload: res.data.error } )
         

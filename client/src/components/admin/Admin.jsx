@@ -12,7 +12,7 @@ export default function Admin() {
 
     useEffect( async () => {
         const res = await axios({
-            url: 'https://a1f860e56fc6.ngrok.io/form', 
+            url: 'https://domain/form', 
             method: 'get',
             params: {
                 email: 'abc@admin.com'

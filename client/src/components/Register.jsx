@@ -12,7 +12,7 @@ export default function Register() {
 
     const handleSubmit = async (email, password) => {
         
-        const res = await axios.post('https://6d2916f709b6.ngrok.io/register', { email, password });
+        const res = await axios.post('https://domain/register', { email, password });
             
         if(await res.data.error) dispatch({ type: 'SET_ERROR', payload : res.data.error })            
         
